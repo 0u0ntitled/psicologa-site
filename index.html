@@ -2,373 +2,434 @@
 <html lang="pt-BR">
 <head>
   <!--
-    Modelo 01 – One Page Institucional (Psicóloga)
+    Site Pro – Psicóloga Clínica
     Autor: Vivian de Moura Machinievski
-    Descrição: Site institucional de página única para profissional autônoma.
-    Reutiliza o CSS global em assets/css/main.css para manter consistência visual.
+    Descrição: Site institucional mais completo, com foco em autoridade, conteúdo e agendamento.
   -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dra. Ana Martins | Psicóloga Clínica</title>
 
-  <meta name="description" content="Atendimento psicológico ético e acolhedor para adultos e adolescentes. Consultas presenciais e online com a psicóloga Ana Martins.">
+  <meta name="description" content="Atendimento psicológico para adultos e adolescentes, com foco em ansiedade, autoestima, relacionamentos e transições de vida. Consultório em SP e atendimento online.">
   <meta name="author" content="Vivian de Moura Machinievski">
-  <link rel="stylesheet" href="assets/css/main.css">
+
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <!-- =========================
-       HEADER & NAVEGAÇÃO
+       BARRA SUPERIOR
   ========================== -->
-  <header class="site-header">
-    <div class="container header__content">
-      <div class="logo">
-        <span class="logo__mark">AM</span>
-        <div class="logo__text">
-          <span class="logo__title">Dra. Ana Martins</span>
-          <span class="logo__subtitle">Psicóloga Clínica · CRP 00/00000</span>
-        </div>
-      </div>
+  <div class="topbar">
+    <div class="container topbar__content">
+      <span>Atendimento online em todo o Brasil · Presencial em São Paulo/SP</span>
+      <a href="#contato" class="topbar__cta">Agende sua primeira conversa</a>
+    </div>
+  </div>
 
-      <nav class="main-nav" aria-label="Navegação principal">
-        <button class="nav-toggle" aria-label="Alternar menu de navegação">
-          <span class="nav-toggle__line"></span>
-          <span class="nav-toggle__line"></span>
+  <!-- =========================
+       HEADER / NAVEGAÇÃO
+  ========================== -->
+  <header class="header">
+    <div class="container header__inner">
+      <a href="#home" class="brand">
+        <div class="brand__avatar" aria-hidden="true"></div>
+        <div class="brand__text">
+          <span class="brand__name">Dra. Ana Martins</span>
+          <span class="brand__subtitle">Psicóloga Clínica · CRP 00/00000</span>
+        </div>
+      </a>
+
+      <nav class="nav" aria-label="Navegação principal">
+        <button class="nav__toggle" aria-label="Abrir menu de navegação">
+          <span></span><span></span>
         </button>
-        <ul class="nav-list">
+        <ul class="nav__list">
           <li><a href="#sobre">Sobre</a></li>
-          <li><a href="#abordagens">Abordagens</a></li>
-          <li><a href="#servicos">Serviços</a></li>
-          <li><a href="#depoimentos">Depoimentos</a></li>
+          <li><a href="#especialidades">Especialidades</a></li>
+          <li><a href="#metodo">Método</a></li>
+          <li><a href="#conteudo">Conteúdo</a></li>
           <li><a href="#faq">Dúvidas</a></li>
-          <li><a href="#contato" class="btn btn--primary btn--small">Agendar</a></li>
+          <li><a href="#contato" class="btn btn--primary btn--sm">Agendar</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
   <!-- =========================
-       HERO / DESTAQUE
+       HERO / INTRO
   ========================== -->
-  <main>
+  <main id="home">
     <section class="hero">
       <div class="container hero__grid">
         <div class="hero__text">
-          <p class="eyebrow">Psicologia Clínica · Adultos e Adolescentes</p>
-          <h1>Um espaço seguro para falar, sentir e se reconectar com você.</h1>
+          <p class="eyebrow">Psicologia clínica · Online e presencial</p>
+          <h1>Um espaço seguro para ressignificar histórias, emoções e relações.</h1>
           <p class="hero__subtitle">
-            Atendimentos presenciais e online, com acolhimento, escuta ativa e sigilo.
-            Juntos, construímos caminhos para lidar com ansiedade, estresse, autocobrança
-            e desafios emocionais do dia a dia.
+            Acompanhamento psicológico para quem sente que está sempre no limite:
+            ansiedade, autocobrança, exaustão emocional e dificuldade em dizer “não”.
           </p>
-          <div class="hero__actions">
-            <a href="#contato" class="btn btn--primary">Agendar consulta</a>
-            <a href="#sobre" class="btn btn--ghost">Saiba mais</a>
-          </div>
-          <ul class="hero__highlights">
-            <li>Atendimento online em todo o Brasil</li>
-            <li>Ambiente acolhedor e humanizado</li>
-            <li>Foco em ansiedade, autoestima e relações</li>
-          </ul>
-        </div>
 
-        <div class="hero__card">
-          <div class="hero-profile">
-            <div class="hero-profile__avatar" aria-hidden="true"></div>
-            <div class="hero-profile__info">
-              <h2>Dra. Ana Martins</h2>
-              <p>Psicóloga Clínica · CRP 00/00000</p>
-              <p class="hero-profile__location">Atendimento online e em consultório · São Paulo/SP</p>
+          <div class="hero__cta-group">
+            <a href="#contato" class="btn btn--primary">Quero agendar uma sessão</a>
+            <button class="btn btn--ghost js-scroll-to" data-target="#especialidades">
+              Entender melhor meu momento
+            </button>
+          </div>
+
+          <div class="hero__tags">
+            <span>Ansiedade e crises</span>
+            <span>Autoestima e autocrítica</span>
+            <span>Relacionamentos</span>
+            <span>Transições de vida</span>
+          </div>
+
+          <div class="hero__trust">
+            <div>
+              <strong>+5 anos</strong>
+              <span>de experiência clínica</span>
+            </div>
+            <div>
+              <strong>+400</strong>
+              <span>sessões individuais conduzidas</span>
+            </div>
+            <div>
+              <strong>Atendimento</strong>
+              <span>online e presencial</span>
             </div>
           </div>
-          <div class="hero-card__body">
-            <h3>Principais demandas que atendo</h3>
-            <ul class="tag-list">
-              <li class="tag">Ansiedade</li>
-              <li class="tag">Estresse</li>
-              <li class="tag">Autocobrança</li>
-              <li class="tag">Relacionamentos</li>
-              <li class="tag">Transições de carreira</li>
+        </div>
+
+        <aside class="hero__panel">
+          <div class="hero-card">
+            <h2>Primeira conversa</h2>
+            <p>Um encontro inicial para você me contar o que está vivendo e entender como a terapia pode te ajudar.</p>
+            <ul class="hero-card__list">
+              <li>50 minutos de atendimento</li>
+              <li>Online ou presencial</li>
+              <li>Espaço acolhedor e sigiloso</li>
             </ul>
             <p class="hero-card__note">
-              <strong>Primeira sessão:</strong> conversa inicial para conhecer sua história,
-              suas necessidades e alinharmos expectativas sobre o processo terapêutico.
+              <strong>Não é compromisso de continuidade.</strong> É um primeiro passo para alinharmos expectativas.
             </p>
+            <a href="#contato" class="btn btn--primary btn--full">Agendar primeira conversa</a>
+          </div>
+
+          <div class="agenda-card">
+            <h3>Agenda da semana</h3>
+            <ul>
+              <li>
+                <span class="agenda-card__day">Terça</span>
+                <span>Noite · Online</span>
+              </li>
+              <li>
+                <span class="agenda-card__day">Quarta</span>
+                <span>Tarde · Presencial</span>
+              </li>
+              <li>
+                <span class="agenda-card__day">Quinta</span>
+                <span>Noite · Online</span>
+              </li>
+            </ul>
+            <p class="agenda-card__obs">* horários sujeitos à disponibilidade. Confirmamos por WhatsApp.</p>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- =========================
+         SOBRE / BIO
+    ========================== -->
+    <section id="sobre" class="section section--soft">
+      <div class="container bio">
+        <div class="bio__main">
+          <h2>Quem sou e como trabalho</h2>
+          <p>
+            Trabalho com psicologia clínica entendendo que cada pessoa é atravessada por histórias,
+            vínculos e contextos muito singulares. A terapia não é um lugar de julgamento, e sim
+            de escuta, construção de sentido e experimentação de novas formas de estar no mundo.
+          </p>
+          <p>
+            Minha atuação é voltada especialmente para pessoas que se sentem constantemente
+            sobrecarregadas, ansiosas ou com dificuldade em reconhecer limites e necessidades próprias.
+          </p>
+          <div class="bio__pillars">
+            <div>
+              <h3>Acolhimento</h3>
+              <p>Um espaço onde você pode falar sobre o que muitas vezes não consegue dizer em outros lugares.</p>
+            </div>
+            <div>
+              <h3>Responsabilidade compartilhada</h3>
+              <p>A terapia é um processo feito a quatro mãos: caminhamos juntas(os), com objetivos claros.</p>
+            </div>
+            <div>
+              <h3>Ritmo respeitado</h3>
+              <p>Cada pessoa tem seu tempo. O processo é adaptado à sua realidade e às suas possibilidades.</p>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
 
-    <!-- =========================
-         SOBRE
-    ========================== -->
-    <section id="sobre" class="section section--alt">
-      <div class="container grid-2">
-        <div>
-          <h2>Sobre a minha abordagem</h2>
-          <p>
-            Meu trabalho é pautado em uma escuta ativa, acolhedora e sem julgamentos.
-            Acredito que cada pessoa carrega uma história única, e o processo terapêutico
-            é um espaço para ressignificar experiências, fortalecer recursos internos
-            e construir novas possibilidades de vida.
-          </p>
-          <p>
-            Ao longo da nossa caminhada, iremos olhar para emoções, pensamentos e padrões
-            de comportamento, sempre no seu tempo, respeitando seus limites e objetivos.
-          </p>
-        </div>
-        <div class="highlight-box">
-          <h3>Formação e experiência</h3>
-          <ul class="icon-list">
-            <li>
-              <span class="icon-list__icon" aria-hidden="true">🎓</span>
-              Graduação em Psicologia – Universidade Exemplo
-            </li>
-            <li>
-              <span class="icon-list__icon" aria-hidden="true">📚</span>
-              Especialização em Psicoterapia Cognitivo-Comportamental
-            </li>
-            <li>
-              <span class="icon-list__icon" aria-hidden="true">🧠</span>
-              Experiência em atendimentos clínicos individuais
-            </li>
-            <li>
-              <span class="icon-list__icon" aria-hidden="true">💬</span>
-              Atuação com adultos e adolescentes em contexto online e presencial
-            </li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- =========================
-         ABORDAGENS
-    ========================== -->
-    <section id="abordagens" class="section">
-      <div class="container">
-        <div class="section__header">
-          <h2>Como posso te ajudar</h2>
-          <p>Conheça algumas das frentes de atuação mais comuns na clínica.</p>
-        </div>
-
-        <div class="cards-grid">
-          <article class="card">
-            <h3>Ansiedade e preocupação excessiva</h3>
-            <p>
-              Juntos, vamos identificar gatilhos, padrões de pensamento e estratégias
-              práticas para lidar com crises de ansiedade, medos e inseguranças.
-            </p>
-          </article>
-
-          <article class="card">
-            <h3>Autoconhecimento e autoestima</h3>
-            <p>
-              Um espaço para se conhecer melhor, olhar para a própria história
-              com mais gentileza e construir uma relação mais saudável consigo mesma(o).
-            </p>
-          </article>
-
-          <article class="card">
-            <h3>Relacionamentos e limites</h3>
-            <p>
-              Apoio para lidar com conflitos afetivos, familiares ou profissionais,
-              desenvolvendo comunicação assertiva e limites mais claros.
-            </p>
-          </article>
-
-          <article class="card">
-            <h3>Transições e mudanças de vida</h3>
-            <p>
-              Acompanhamento em momentos de mudança, como término, luto, mudança de carreira
-              ou mudanças importantes na rotina.
-            </p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- =========================
-         SERVIÇOS
-    ========================== -->
-    <section id="servicos" class="section section--alt">
-      <div class="container">
-        <div class="section__header">
-          <h2>Formatos de atendimento</h2>
-          <p>Escolha o modelo que melhor se adapta à sua rotina e necessidade.</p>
-        </div>
-
-        <div class="pricing-grid">
-          <article class="pricing-card">
-            <h3>Atendimento Online</h3>
-            <p class="pricing-card__tagline">
-              Sessões via vídeo chamada, com toda a segurança e sigilo.
-            </p>
-            <ul class="pricing-card__list">
-              <li>Duração média de 50 minutos</li>
-              <li>Plataforma estável e segura</li>
-              <li>Ideal para rotinas flexíveis ou viagens</li>
+        <aside class="bio__side">
+          <div class="bio-card">
+            <h3>Formação</h3>
+            <ul>
+              <li>Graduação em Psicologia – Universidade Exemplo</li>
+              <li>Especialização em Psicoterapia Cognitivo-Comportamental</li>
+              <li>Formação complementar em Terapias Contextuais</li>
             </ul>
-            <p class="pricing-card__note">
-              Consulte valores e disponibilidade via WhatsApp.
+          </div>
+          <div class="bio-card">
+            <h3>Atuação</h3>
+            <ul>
+              <li>Atendimento clínico individual (adultos e adolescentes)</li>
+              <li>Experiência com demandas de ansiedade e burnout</li>
+              <li>Atendimento online em todo o Brasil</li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- =========================
+         ESPECIALIDADES
+    ========================== -->
+    <section id="especialidades" class="section">
+      <div class="container">
+        <header class="section__header">
+          <h2>Em quais momentos posso te apoiar</h2>
+          <p>Situações e temas que aparecem com frequência na clínica.</p>
+        </header>
+
+        <div class="grid grid--3">
+          <article class="feature">
+            <h3>Ansiedade e crises recorrentes</h3>
+            <p>
+              Quando a mente não desliga, o corpo sente. Trabalhamos estratégias para lidar com
+              crises, pensamentos acelerados e medos que parecem não ter fim.
             </p>
-            <a href="#contato" class="btn btn--primary btn--full">Agendar online</a>
           </article>
 
-          <article class="pricing-card">
-            <h3>Atendimento Presencial</h3>
-            <p class="pricing-card__tagline">
-              Consultório acolhedor, pensado para sua privacidade e bem-estar.
+          <article class="feature">
+            <h3>Autoestima e autocrítica</h3>
+            <p>
+              A sensação de nunca ser suficiente, a voz interna dura, a comparação constante.
+              Olhamos para essa narrativa com mais gentileza e responsabilidade.
             </p>
-            <ul class="pricing-card__list">
-              <li>Região central de São Paulo/SP</li>
-              <li>Ambiente confortável e reservado</li>
-              <li>Acessível por transporte público</li>
-            </ul>
-            <p class="pricing-card__note">
-              Endereço completo informado após o agendamento da primeira sessão.
+          </article>
+
+          <article class="feature">
+            <h3>Relacionamentos e vínculos</h3>
+            <p>
+              Dificuldade de colocar limites, padrões que se repetem, medo de abandono.
+              Observamos como você se relaciona consigo e com o outro.
             </p>
-            <a href="#contato" class="btn btn--ghost btn--full">Ver disponibilidade</a>
+          </article>
+
+          <article class="feature">
+            <h3>Transições de vida</h3>
+            <p>
+              Mudanças de carreira, términos, maternidade, lutos – momentos em que o chão parece
+              sair do lugar e é preciso reconstruir referências.
+            </p>
+          </article>
+
+          <article class="feature">
+            <h3>Exaustão emocional e burnout</h3>
+            <p>
+              Quando o corpo dá sinais de que não aguenta mais o ritmo. Falamos sobre trabalho,
+              identidade, limites e o que pode ser ressignificado.
+            </p>
+          </article>
+
+          <article class="feature">
+            <h3>Autoconhecimento</h3>
+            <p>
+              Mesmo sem “grandes crises”, é possível buscar terapia para entender sua própria
+              história com mais profundidade e intenção.
+            </p>
           </article>
         </div>
       </div>
     </section>
 
     <!-- =========================
-         DEPOIMENTOS
+         MÉTODO / COMO FUNCIONA
     ========================== -->
-    <section id="depoimentos" class="section">
+    <section id="metodo" class="section section--soft">
+      <div class="container method">
+        <div class="method__intro">
+          <h2>Como funciona o processo terapêutico</h2>
+          <p>
+            Mais do que “apenas conversar”, a terapia é um processo estruturado, com começo,
+            meio e reavaliações ao longo do caminho.
+          </p>
+        </div>
+
+        <ol class="timeline">
+          <li class="timeline__item">
+            <div class="timeline__marker"></div>
+            <div class="timeline__content">
+              <h3>1. Primeira conversa</h3>
+              <p>Entendemos o que te trouxe até aqui e o que você espera do processo.</p>
+            </div>
+          </li>
+          <li class="timeline__item">
+            <div class="timeline__marker"></div>
+            <div class="timeline__content">
+              <h3>2. Acordos iniciais</h3>
+              <p>Combinamos frequência, dia, horário, valores e formato (online/presencial).</p>
+            </div>
+          </li>
+          <li class="timeline__item">
+            <div class="timeline__marker"></div>
+            <div class="timeline__content">
+              <h3>3. Processo contínuo</h3>
+              <p>Seguimos com os encontros semanais, alinhando expectativas e metas.</p>
+            </div>
+          </li>
+          <li class="timeline__item">
+            <div class="timeline__marker"></div>
+            <div class="timeline__content">
+              <h3>4. Revisões periódicas</h3>
+              <p>De tempos em tempos, paramos para olhar o caminho percorrido e o que ainda faz sentido.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- =========================
+         CONTEÚDO / BLOGZINHO
+    ========================== -->
+    <section id="conteudo" class="section">
       <div class="container">
-        <div class="section__header">
-          <h2>O que pacientes relatam sobre o processo</h2>
-          <p>Nomes e detalhes são alterados para preservar o sigilo terapêutico.</p>
+        <header class="section__header">
+          <h2>Textos e reflexões</h2>
+          <p>Conteúdos que ajudam a colocar em palavras o que muita gente sente em silêncio.</p>
+        </header>
+
+        <div class="grid grid--3">
+          <article class="post-card">
+            <span class="post-card__tag">Ansiedade</span>
+            <h3>Quando a mente não desliga à noite</h3>
+            <p>Uma reflexão sobre pensamentos acelerados antes de dormir e caminhos possíveis na terapia.</p>
+            <span class="post-card__meta">Leitura rápida · 4 min</span>
+          </article>
+
+          <article class="post-card">
+            <span class="post-card__tag">Limites</span>
+            <h3>Aprender a dizer “não” sem se sentir uma pessoa ruim</h3>
+            <p>Falamos sobre culpa, cuidado com o outro e autocuidado possível.</p>
+            <span class="post-card__meta">Leitura rápida · 3 min</span>
+          </article>
+
+          <article class="post-card">
+            <span class="post-card__tag">Autocrítica</span>
+            <h3>Por que ser tão dura(o) consigo mesma(o)?</h3>
+            <p>Um convite a olhar para a voz interna crítica com mais curiosidade e menos violência.</p>
+            <span class="post-card__meta">Leitura rápida · 5 min</span>
+          </article>
         </div>
 
-        <div class="testimonials-grid">
-          <figure class="testimonial">
-            <blockquote>
-              “A terapia me ajudou a entender melhor meus limites e a forma como eu
-              me relaciono comigo e com os outros. Hoje consigo me posicionar sem tanta culpa.”
-            </blockquote>
-            <figcaption>— M., 32 anos</figcaption>
-          </figure>
-
-          <figure class="testimonial">
-            <blockquote>
-              “Eu estava em um momento de muita ansiedade e insônia. Com o tempo,
-              aprendi estratégias para lidar com as crises e ressignificar várias situações.”
-            </blockquote>
-            <figcaption>— L., 27 anos</figcaption>
-          </figure>
-
-          <figure class="testimonial">
-            <blockquote>
-              “Ter um espaço seguro para falar de coisas que eu nunca tinha dito em voz alta
-              fez toda a diferença. Me sinto mais inteira e mais consciente das minhas escolhas.”
-            </blockquote>
-            <figcaption>— R., 40 anos</figcaption>
-          </figure>
-        </div>
+        <p class="content__note">
+          * Os textos acima são exemplos fictícios para demonstração de layout. Em um site real,
+          poderiam ser links para blog, newsletter ou Instagram profissional.
+        </p>
       </div>
     </section>
 
     <!-- =========================
          FAQ
     ========================== -->
-    <section id="faq" class="section section--alt">
+    <section id="faq" class="section section--soft">
       <div class="container">
-        <div class="section__header">
+        <header class="section__header">
           <h2>Dúvidas frequentes</h2>
-          <p>Algumas perguntas que podem te ajudar a dar o primeiro passo.</p>
-        </div>
+          <p>Clique nas perguntas para ver as respostas.</p>
+        </header>
 
-        <div class="faq-grid">
-          <article class="faq-item">
-            <h3>Como funciona a primeira sessão?</h3>
+        <div class="faq">
+          <button class="faq__item js-accordion">
+            <span>Preciso ter um “grande problema” para procurar terapia?</span>
+            <span class="faq__icon">+</span>
+          </button>
+          <div class="faq__panel">
             <p>
-              A primeira sessão é um momento para você falar sobre o que está te trazendo
-              para a terapia, suas expectativas e perguntas. Também é quando explico
-              como trabalho e combinamos juntos a frequência dos encontros.
+              Não. Muitas pessoas buscam terapia para se conhecer melhor, entender padrões de
+              comportamento ou cuidar de questões que não chegam a ser crises, mas incomodam.
             </p>
-          </article>
+          </div>
 
-          <article class="faq-item">
-            <h3>Qual a frequência das sessões?</h3>
+          <button class="faq__item js-accordion">
+            <span>As sessões são sempre no mesmo dia e horário?</span>
+            <span class="faq__icon">+</span>
+          </button>
+          <div class="faq__panel">
             <p>
-              Em geral, as sessões acontecem 1 vez por semana. Em alguns casos, podemos
-              ajustar essa frequência de acordo com sua necessidade e possibilidade.
+              Em geral, sim. A ideia é que você tenha um horário fixo reservado para o seu cuidado.
+              Caso precise mudar, alinhamos com antecedência.
             </p>
-          </article>
+          </div>
 
-          <article class="faq-item">
-            <h3>Quanto tempo dura a terapia?</h3>
+          <button class="faq__item js-accordion">
+            <span>Posso fazer apenas algumas sessões?</span>
+            <span class="faq__icon">+</span>
+          </button>
+          <div class="faq__panel">
             <p>
-              Não existe um tempo fixo. O processo é construído caso a caso, levando em
-              conta seus objetivos, demandas e ritmo. Ao longo do caminho, vamos revisando
-              juntos o que faz sentido.
+              Podemos combinar um processo mais breve, com foco em um tema específico.
+              Tudo é conversado no início do acompanhamento.
             </p>
-          </article>
-
-          <article class="faq-item">
-            <h3>Como são feitos os pagamentos?</h3>
-            <p>
-              Os pagamentos podem ser combinados por sessão ou mensalidade, via transferência
-              ou PIX. Todos os detalhes são alinhados antes do início do acompanhamento.
-            </p>
-          </article>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- =========================
-         CONTATO
+         CONTATO / CTA FINAL
     ========================== -->
-    <section id="contato" class="section section--accent">
-      <div class="container contact-grid">
-        <div>
-          <h2>Vamos dar o próximo passo?</h2>
+    <section id="contato" class="section section--cta">
+      <div class="container contact">
+        <div class="contact__text">
+          <h2>Se algo em você pediu pausa ao ler essa página, talvez seja hora de cuidar disso.</h2>
           <p>
-            Se você sente que é hora de cuidar de você com mais atenção, podemos conversar.
-            Envie uma mensagem e retornarei com opções de horário para a primeira sessão.
+            Me escreva contando um pouco do seu momento. Não precisa ser perfeito ou organizado,
+            pode ser do jeito que vier. A partir daí, alinhamos juntas(os) os próximos passos.
           </p>
-          <ul class="contact-list">
+          <ul class="contact__info">
             <li><strong>E-mail:</strong> contato@draanamartins.com</li>
             <li><strong>WhatsApp:</strong> (11) 99999-9999</li>
             <li><strong>Atendimento:</strong> Online e presencial em São Paulo/SP</li>
           </ul>
         </div>
 
-        <form class="contact-form" action="#" method="post">
-          <div class="form-row">
-            <label for="nome">Nome completo</label>
-            <input type="text" id="nome" name="nome" required placeholder="Como você prefere ser chamada(o)?">
+        <form class="contact__form" action="#" method="post">
+          <div class="field">
+            <label for="nome">Nome</label>
+            <input id="nome" name="nome" type="text" required placeholder="Como você prefere ser chamada(o)?">
           </div>
-
-          <div class="form-row">
+          <div class="field">
             <label for="email">E-mail</label>
-            <input type="email" id="email" name="email" required placeholder="seuemail@exemplo.com">
+            <input id="email" name="email" type="email" required placeholder="seuemail@exemplo.com">
           </div>
-
-          <div class="form-row">
-            <label for="assunto">Motivo do contato</label>
-            <select id="assunto" name="assunto" required>
-              <option value="">Selecione...</option>
-              <option value="primeira-sessao">Agendar primeira sessão</option>
-              <option value="duvidas">Tirar dúvidas sobre o processo</option>
-              <option value="outro">Outro assunto</option>
+          <div class="field">
+            <label for="motivo">O que te trouxe até aqui?</label>
+            <select id="motivo" name="motivo" required>
+              <option value="">Selecione uma opção</option>
+              <option value="ansiedade">Ansiedade / crises frequentes</option>
+              <option value="autoestima">Autoestima / autocrítica</option>
+              <option value="relacionamentos">Relacionamentos / limites</option>
+              <option value="transicoes">Transições de vida</option>
+              <option value="outros">Outros temas</option>
             </select>
           </div>
-
-          <div class="form-row">
+          <div class="field">
             <label for="mensagem">Mensagem</label>
-            <textarea id="mensagem" name="mensagem" rows="4" required placeholder="Se quiser, conte um pouco sobre o que te trouxe até aqui."></textarea>
+            <textarea id="mensagem" name="mensagem" rows="4" required placeholder="Se quiser, compartilhe um pouco sobre como você tem se sentido."></textarea>
           </div>
-
-          <button type="submit" class="btn btn--primary btn--full">
-            Enviar mensagem
-          </button>
-
-          <p class="contact-form__disclaimer">
-            Este formulário não substitui atendimento de emergência. Em situações graves,
-            procure imediatamente um serviço de saúde ou ligue para os canais oficiais de ajuda.
+          <button type="submit" class="btn btn--primary btn--full">Enviar mensagem</button>
+          <p class="contact__note">
+            Este formulário não substitui canais de emergência. Em situações de risco imediato,
+            procure serviços de saúde da sua região.
           </p>
         </form>
       </div>
@@ -378,16 +439,13 @@
   <!-- =========================
        FOOTER
   ========================== -->
-  <footer class="site-footer">
-    <div class="container footer__content">
-      <p>© <span id="year"></span> Dra. Ana Martins · Psicóloga Clínica · CRP 00/00000</p>
-      <p class="footer__secondary">
-        Site modelo desenvolvido para demonstração de portfólio.
-      </p>
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p>© <span id="year"></span> · Dra. Ana Martins · Psicóloga Clínica · CRP 00/00000</p>
+      <p>Site modelo desenvolvido para fins de portfólio.</p>
     </div>
   </footer>
 
-  <!-- Script opcional (data automática e menu mobile simples) -->
-  <script src="assets/js/main.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>
